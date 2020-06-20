@@ -3,8 +3,8 @@ require_relative 'lib/mygem/version'
 Gem::Specification.new do |spec|
   spec.name          = "mygem"
   spec.version       = Mygem::VERSION
-  spec.authors       = ["ogabriel"]
-  spec.email         = ["gabrieloliver8991@gmail.com"]
+  spec.authors       = ["ogabriel", "linqueta"]
+  spec.email         = []
 
   spec.summary       = %q{Summary}
   spec.description   = %q{Description}
