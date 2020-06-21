@@ -2,5 +2,8 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.6.5
-before_install: gem install bundler -v 2.1.4
+  - 2.7.1
+before_install: bash bin/setup
+script:
+  - 'bundle exec rubocop --fail-fast'
+  - 'bundle exec rspec --fail-fast'
