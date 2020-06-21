@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
 
-  spec.files         = Dir['{lib}/**/*', 'CHANGELOG.md', 'README.md']
+  spec.files = Dir['{lib}/**/*', 'CHANGELOG.md', 'README.md']
 
   spec.add_runtime_dependency 'aws-sdk-core', '~> 3.0', '>= 3.0'
 
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop', '~> 0.74', '>= 0.74.0'
   spec.add_development_dependency 'rubocop-performance', '~> 1.4', '>= 1.4.1'
   spec.add_development_dependency 'simplecov', '~> 0.17.1'
-  spec.add_development_dependency 'simplecov-console',  '~> 0.5.0', '>= 0.5.0'
+  spec.add_development_dependency 'simplecov-console', '~> 0.5.0', '>= 0.5.0'
   spec.add_development_dependency 'vcr', '~> 5.0', '>= 5.0.0'
   spec.add_development_dependency 'webmock', '~> 3.7', '>= 3.7.6'
 end
