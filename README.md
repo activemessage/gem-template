@@ -4,7 +4,13 @@ This is only a template to create other gems.
 
 ## Usage
 
-Run `rename.sh NEW_NAME` to rename the files, after that, you can erase it.
+Run `./rename.sh CLASS_NAME` to rename the files, after that, you can erase it.
+
+Example:
+
+```ruby
+./rename.sh Foo::Bar
+```
 
 ## Development
 
