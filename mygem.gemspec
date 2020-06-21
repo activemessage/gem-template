@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   # Dependencies
+  spec.add_development_dependency 'pry-byebug', '>= 3.9.0'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '>= 0.74.0'
