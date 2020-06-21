@@ -1,4 +1,6 @@
-require "mygem/version"
+# frozen_string_literal: true
+
+require 'mygem/version'
 
 module Mygem
   class Error < StandardError; end
