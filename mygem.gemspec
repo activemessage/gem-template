@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["ogabriel", "linqueta"]
   spec.email         = []
 
-  spec.summary       = %q{Summary}
-  spec.description   = %q{Description}
+  spec.summary       = "Summary"
+  spec.description   = "Description"
   spec.homepage      = "https://github.com/activemessage/gem-template"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
