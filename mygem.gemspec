@@ -6,32 +6,27 @@ Gem::Specification.new do |spec|
   spec.name          = 'mygem'
   spec.version       = Mygem::VERSION
   spec.authors       = %w[ogabriel linqueta]
-  spec.email         = []
+  spec.email         = ['lincolnrodrs@gmail.com']
 
   spec.summary       = 'Summary'
   spec.description   = 'Description'
   spec.homepage      = 'https://github.com/activemessage/gem-template'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
 
-  spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['allowed_push_host'] = 'https://github.com/activemessage/gem-template'
-  spec.metadata['source_code_uri'] = 'https://github.com/activemessage/gem-template'
-  spec.metadata['changelog_uri'] = 'https://github.com/activemessage/gem-template/blob/master/CHANGELOG.md'
+  spec.files = Dir['{lib}/**/*', 'CHANGELOG.md', 'README.md']
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  end
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ['lib']
+  spec.add_runtime_dependency 'aws-sdk-core', '~> 3.0', '>= 3.0'
 
-  # Dependencies
-  spec.add_development_dependency 'pry-byebug', '>= 3.9.0'
+  spec.add_development_dependency 'bundler', '~> 2.0'
+  spec.add_development_dependency 'factory_bot', '~> 5.1', '>= 5.1.1'
+  spec.add_development_dependency 'pry-byebug', '~> 3.9', '>= 3.9.0'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop', '>= 0.74.0'
-  spec.add_development_dependency 'rubocop-performance', '>= 1.4.1'
+  spec.add_development_dependency 'rubocop', '~> 0.74', '>= 0.74.0'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.4', '>= 1.4.1'
+  spec.add_development_dependency 'simplecov', '~> 0.17.1'
+  spec.add_development_dependency 'simplecov-console', '~> 0.5.0', '>= 0.5.0'
+  spec.add_development_dependency 'vcr', '~> 5.0', '>= 5.0.0'
+  spec.add_development_dependency 'webmock', '~> 3.7', '>= 3.7.6'
 end

@@ -12,20 +12,53 @@ Example:
 ./rename.sh Foo::Bar
 ```
 
-## Development
+## Manual Setup
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+1. Create your repository using this repo as template
+2. Change some files:
+  - Path /lib/mygem -> Change for you path directoy.
+    - E.g: /lib/foo/bar
+  - File /lib/mygem -> Change for your main module name
+    - Don't forget to create a file rb in /lib for Rails default import
+      - E.g: For a gem called activemessage-core and the main module is ActiveMessage::Core, create a file in /lib called activemessage-core.rb and require 'active_message/core' inside that
+    - Don't forget to create da main module nested
+      - E.g: For a module ActiveMessage::Core, it should be /lib/active_message/core.rb
+  - Change gem name in /bin/console
+  - Change spec mygem_spec.rb
+  - Chagem gem name in spec_helper.rb
+  - Change gemspec
+    - Filename
+    - Summary
+    - Description
+    - Dependecies
+  - Delete README.md and rename README-template.md to README.md and change its content
+    - Change the follow variables:
+      - CHANGE_MY_NAME_PLEASE
+      - CHANGE_MY_DESCRIPTION_PLEASE
+      - CHANGE_MY_GEM_NAME_PLEASE
+      - CHANGE_MY_INSTALLATION_PLEASE
+      - CHANGE_MY_SETTINGS_PLEASE
+      - CHANGE_MY_REPO_NAME_PLEASE
+      - CHANGE_MY_CODE_CLIMATE_ACCOUNT_PLEASE
+  - Delete rename.sh
+3. Change code climate key in file .travis.yml
+4. Run bundle && bundle exec rubocop && bundle exec rspec to check if everything is ok
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/activemessage/gem-template. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/mygem/blob/master/CODE_OF_CONDUCT.md).
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License][mit_license_page].
 
 ## Code of Conduct
 
-Everyone interacting in the Mygem project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/activemessage/gem-template/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Rails::Healthcheck project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct][code_of_conduct_page].
+
+[code_of_conduct_page]: https://github.com/linqueta/rails-healthcheck/blob/master/CODE_OF_CONDUCT.md
+[mit_license_page]: https://opensource.org/licenses/MIT
